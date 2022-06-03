@@ -19,9 +19,6 @@ Base.metadata.create_all(engine)
 
 app = FastAPI()
 
-# @app.get("/")
-# async def root():
-#     return {"message": "Hello World"}
 
 @app.post("/create-employee", status_code=status.HTTP_201_CREATED)
 async def create_employee(employee: EmployeeRequest):
@@ -29,7 +26,7 @@ async def create_employee(employee: EmployeeRequest):
     # create a new database session
     session = Session(bind=engine, expire_on_commit=False)
 
-    # create an instance of the ToDo database model
+    # create an instance of the Employee database model
     employeedb = Employee(name = employee.name)
 
     # add it to the session and commit it
@@ -65,7 +62,7 @@ def read_employee_list():
     # create a new database session
     session = Session(bind=engine, expire_on_commit=False)
 
-    # get all todo items
+    # get all employees
     employee_list = session.query(Employee).all()
 
     # close the session
