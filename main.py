@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.sql.functions import mode
 
 
-# Create ToDoRequest Base Model
+# Create employee request Base Model
 class EmployeeRequest(BaseModel):
     id : int
     name: str
