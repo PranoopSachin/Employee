@@ -1,10 +1,14 @@
 # Employee
 
-clone the repository
+#clone the repository
+
+git clone https://github.com/PranoopSachin/Employee.git
+
+#Install the dependencies
 
 pip install -r requirement.txt
 
-and Run below command to run the application
+#and Run below command to run the application
 
 python3 main.py
 
