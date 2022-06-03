@@ -54,7 +54,7 @@ async def get_employee(id: int):
     # close the session
     session.close()
 
-    return f"employee  with id: {employee.id} and task: {employee.name}"
+    return f"employee  with id: {employee.id} and name: {employee.name}"
     
 
 @app.get("/employee-list")
